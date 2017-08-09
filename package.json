@@ -1,0 +1,30 @@
+{
+  "name": "musicsearch",
+  "description": "Music Search App using Discogs API",
+  "version": "0.0.1",
+  "keywords": ["music", "search", "discogs"],
+  "homepage": "https://github.com/sanzstv/musicsearch",
+  "license": "MIT",
+  "author": "Stevie Sanz <steviesanz@comcast.net> (https://github.com/sanzstv)",
+  "main": "src/app.js",
+  "directories": {
+    "lib": "./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanzstv/musicsearch.git"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "dependencies": {
+    "disconnect": "1.2.x",
+    "oauth-1.0a": "2.x.x"
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  }
+}
+
