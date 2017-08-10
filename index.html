@@ -6,6 +6,29 @@
 		<link rel = "stylesheet" href="css/styles.css">
 	</head>
 	<body ng-app="MusicSearchApp">
+
+		<div class = "main-content">
+			<!--Search box-->
+			<section class="search-bar">
+				<form ng-submit="search()">
+					<input type="text" name="query" ng-model="searchQuery">
+					<button value="Search" type="submit"></button>
+				</form>
+			</section>	
+
+			<!--Display results-->
+			<section class="results">
+				<div class="no-results" ng-hide="results.length">Sorry, we were unable to return any results for your request.</div>
+					<div>{{results}}</div>
+		</div>
+
+
+
+
+
+
+
+		<!--Scripts-->
     	<script src="lib/angular.js"></script>
     	<script src="lib/angular-ui-router.min.js"></script>
 	</body>
