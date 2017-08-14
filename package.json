@@ -19,8 +19,7 @@
   },
   "dependencies": {
     "disconnect": "1.2.x",
-    "oauth-1.0a": "2.x.x",
-    "elasticseach-browser": "13.3.1"
+    "oauth-1.0a": "2.x.x"
   },
   "devDependencies": {
   },

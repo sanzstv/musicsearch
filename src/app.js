@@ -1,13 +1,10 @@
 (function(){
 	'use strict';
-	angular.module('MusicSearchApp', ['elasticsearch'],
-  	['$locationProvider', function($locationProvider) {
-    	$locationProvider.html5Mode(true);
-  	}])
+	angular.module('MusicSearchApp', [])
 	.controller('MusicSearchController', MusicSearchController)
 	.factory('MusicService', MusicService);
 
-	MusicSearchController.inject('$scope', '$location');
+	MusicSearchController.$inject = ['$scope', '$location'];
 	function MusicSearchController($scope, $location){
 		/*initially for testing*/
 		var options = [
@@ -27,7 +24,7 @@
 		var start = Math.floor(Math.random() * options.length);
 
 		$scope.results=[];
-		$scope.searchQuery = $location.search().q || options[start];
+		$scope.searchQuery = search().q || options[start];
 		$scope.search = function() {
 			$scope.results = [];
 			$location.search({'q': $searchQuery});
@@ -35,6 +32,4 @@
 		};
 	}
 
-	MusicService.inject('$q', '$location', 'esFactory');
-	function MusicService($)
 })();
