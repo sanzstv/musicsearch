@@ -1,6 +1,6 @@
 {
   "name": "musicsearch",
-  "description": "Music Search App using Sportify API",
+  "description": "Music Search App using Spotify API",
   "version": "0.0.1",
   "keywords": [
     "music",

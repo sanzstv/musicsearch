@@ -1,0 +1,4 @@
+var config = {
+  "SPOTIFY_CLIENT_ID" : "your ID here",
+  "SPOTIFY_CLIENT_SECRET" : "your secret here"
+}

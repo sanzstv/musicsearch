@@ -1,5 +1,10 @@
 (function(){
 	'use strict';
+	var Spotify = require('spotify-web-api-js');
+	var s = new Spotify();
+	var spotifyApi = new SpotifyWebApi();
+	/*spotifyApi.setAccessToken('');*/
+
 	angular.module('MusicSearchApp', [])
 	.controller('MusicSearchController', MusicSearchController)
 	.factory('MusicService', MusicService);
@@ -23,13 +28,12 @@
 
 		var start = Math.floor(Math.random() * options.length);
 
-		$scope.results=[];
-		$scope.searchQuery = search().q || options[start];
-		$scope.search = function() {
-			$scope.results = [];
-			$location.search({'q': $searchQuery});
-			$scope.page = 0;
-		};
+			spotifyApi.searchArtists('Hole')
+			  .then(function(data) {
+			    console.log('Search artists by "Love"', data);
+			  }, function(err) {
+			    console.error(err);
+			  });
 	}
 
 })();
