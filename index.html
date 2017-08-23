@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<title>Music Search</title>
@@ -7,30 +7,26 @@
 	</head>
 	<body ng-app="MusicSearchApp">
 
-		<div class = "main-content">
+		<div class="container" ng-controller="MusicSearchController as music">
 			<!--Search box-->
-			<section class="search-bar">
-				<form ng-submit="search()">
-					<input type="text" name="query" ng-model="searchQuery">
-					<button value="Search" name="Search" type="submit"></button>
-				</form>
-			</section>	
+		    <h1>Search for an artist</h1>
 
-			<!--Display results-->
-			<section class="results">
-				<div class="no-results" ng-show="results.length">Sorry, we were unable to return any results for your request.</div>
-					<div>{{results}}</div>
-		</div>
-
-
-
-
+		    <div>
+		      <input type="text" placeholder="search term" class="form-control" ng-model="music.query">
+		    </div>
+		    <div>
+		      <button ng-click="music.search()">Search</button>
+		    </div>
+		    <div ng-if="music.message">{{music.message}}</div>
+		    {{results}}
+		  </div>
+		
 
 
 
 		<!--Scripts-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     	<script src="lib/angular.js"></script>
-    	<script src="lib/angular-ui-router.min.js"></script>
-        <script type="text/javascript" src="src/apptest.js"></script>
+        <script type="text/javascript" src="src/app.js"></script>
 	</body>
 </html>
